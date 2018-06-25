@@ -1,0 +1,22 @@
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\bin\Debug\Estructuras de datos.exe.config
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\bin\Debug\Estructuras de datos.exe
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\bin\Debug\Estructuras de datos.pdb
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\bin\Debug\Estructuras de datos.xml
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\obj\Debug\Estructuras de datos.vbprojAssemblyReference.cache
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\obj\Debug\Estructuras_de_datos.Resources.resources
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\obj\Debug\Estructuras de datos.vbproj.GenerateResource.cache
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\obj\Debug\Estructuras de datos.vbproj.CoreCompileInputs.cache
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\obj\Debug\Estructuras de datos.exe
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\obj\Debug\Estructuras de datos.xml
+C:\Users\Eu\source\repos\Estructuras de datos\Estructuras de datos\obj\Debug\Estructuras de datos.pdb
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\bin\Debug\Estructuras de datos.exe.config
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\bin\Debug\Estructuras de datos.exe
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\bin\Debug\Estructuras de datos.pdb
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\bin\Debug\Estructuras de datos.xml
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\obj\Debug\Estructuras de datos.vbprojAssemblyReference.cache
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\obj\Debug\Estructuras_de_datos.Resources.resources
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\obj\Debug\Estructuras de datos.vbproj.GenerateResource.cache
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\obj\Debug\Estructuras de datos.vbproj.CoreCompileInputs.cache
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\obj\Debug\Estructuras de datos.exe
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\obj\Debug\Estructuras de datos.xml
+C:\Users\Eu\source\repos\repos\pg2-tp204-estructuras-datos-yulianote\Estructuras de datos\obj\Debug\Estructuras de datos.pdb
