@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B7E3D850-99A9-487F-BCBF-E8BD2C70A799}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Estructuras_de_datos.ejercicio4_05</StartupObject>
+    <StartupObject>Estructuras_de_datos.ejercicio4_13</StartupObject>
     <RootNamespace>Estructuras_de_datos</RootNamespace>
     <AssemblyName>Estructuras de datos</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -68,11 +68,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ejercicio4_07.vb" />
+    <Compile Include="ejercicio4_09.vb" />
     <Compile Include="ejercicio4_01.vb" />
     <Compile Include="ejercicio4_02.vb" />
     <Compile Include="ejercicio4_03.vb" />
     <Compile Include="ejercicio4_04.vb" />
     <Compile Include="ejercicio4_05.vb" />
+    <Compile Include="ejercicio4_06.vb" />
+    <Compile Include="ejercicio4_08.vb" />
+    <Compile Include="ejercicio4_10.vb" />
+    <Compile Include="ejercicio4_11.vb" />
+    <Compile Include="ejercicio4_12.vb" />
+    <Compile Include="ejercicio4_13.vb" />
+    <Compile Include="ejercicio4_15.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

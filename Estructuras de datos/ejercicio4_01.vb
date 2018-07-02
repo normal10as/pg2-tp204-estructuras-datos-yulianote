@@ -1,5 +1,4 @@
 ﻿Module ejercicio4_01
-
     Sub main()
         Dim arreglo(5) As Decimal
         Dim cantidad As Byte
@@ -20,8 +19,8 @@
 
         For j = 1 To arreglo.Length - 1
             desviacion = arreglo(j) - media
-            Console.WriteLine("el valor del elemento {0}", j & " es " & arreglo(j) & " y tiene una desviacion de: " & desviacion & " respecto a la media de " & media)
+            Console.WriteLine("el valor del elemento {0}", j & " es " & arreglo(j) & " y tiene una desviacion de: " &
+                              desviacion & " respecto a la media de " & media)
         Next
     End Sub
-
 End Module

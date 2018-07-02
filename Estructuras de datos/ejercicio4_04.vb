@@ -13,10 +13,10 @@
         Next
 
         Do
-            Console.WriteLine("Ingrese el dominio del pais: ")
+            Console.Write("Ingrese el dominio del pais: ")
             ingresado = Console.ReadLine()
             If Paises.Contains(ingresado) Then
-                Console.WriteLine(Paises.Item(ingresado))
+                Console.WriteLine("El pais es: " & Paises.Item(ingresado))
             Else
                 Console.WriteLine("El dominio no se encuentra en la lista")
             End If

@@ -1,4 +1,4 @@
-﻿Module ejercicio4_03
+﻿Module ejercicio4_07
     Sub main()
         Dim cantidad_alumnos As SByte
         Dim cantidad_notas As SByte
@@ -20,40 +20,50 @@
         Console.WriteLine("cantidad alumnos: " & cantidad_alumnos & "   cantidad notas: " & cantidad_notas)
         Console.WriteLine("----------------------------------------")
 
-        Dim nombre_alumnos = New String(cantidad_alumnos - 1) {}
-        Dim nota_alumnos = New String(cantidad_notas - 1) {}
-        Dim lista_promedio = New String(cantidad_alumnos - 1) {}
-        Dim promedio As Double
-        Dim mejor_nota As Double
+        Dim nombre_alumnos As New ArrayList
+        Dim nombre As String
+        Dim nota_alumnos As New ArrayList
+        Dim nota As String
+        Dim vector_nota(cantidad_notas - 1) As Single
+        Dim lista_promedio As New ArrayList
+        Dim promedio As Single
+        Dim mejor_nota As Double = 0
+
         For i = 0 To (cantidad_alumnos - 1)
+            promedio = 0
             Console.Write("Ingrese nombre del alumno numero {0} : ", i + 1)
-            nombre_alumnos(i) = Console.ReadLine()
-            While Validar_nombre(nombre_alumnos(i), nombre_alumnos, i)
+            nombre = Console.ReadLine()
+            While Validar_nombre(nombre, nombre_alumnos)
                 Console.WriteLine("Incorrecto, el nombre es vacio o ya existe")
                 Console.Write("Ingrese nombre del alumno numero {0} : ", i + 1)
-                nombre_alumnos(i) = Console.ReadLine()
+                nombre = Console.ReadLine()
             End While
+            nombre_alumnos.Add(nombre)
             For j = 0 To (cantidad_notas - 1)
                 Console.Write("Ingrese la nota numero {0} : ", j + 1)
-                nota_alumnos(j) = Console.ReadLine()
-                While Validar_nota(nota_alumnos(j), nota_alumnos)
+                nota = Console.ReadLine()
+                While Validar_nota(nota)
                     Console.WriteLine("Incorrecto, la nota supero el limite entre 0 y 10 o es vacio ")
-                    Console.Write("Ingrese la nota de " & nombre_alumnos(i) & " numero {0} : ", j + 1)
-                    nota_alumnos(j) = Console.ReadLine()
+                    Console.Write("Ingrese la nota de " & nombre & " numero {0} : ", j + 1)
+                    nota = Console.ReadLine()
                 End While
+                vector_nota(j) = nota
+                promedio += vector_nota(j)
             Next
-            promedio = Promedio_alumnos(nota_alumnos, promedio)
-            Console.WriteLine("el Promedio es: " & promedio)
-            lista_promedio(i) = promedio
-            mejor_nota = La_mejor_nota(promedio, mejor_nota)
+            nota_alumnos.Add(vector_nota)
+            lista_promedio.Add(promedio / cantidad_notas)
+            Console.WriteLine("El promedio es: " & lista_promedio(i))
         Next
-
-        For x = 0 To nombre_alumnos.Length() - 1
+        Console.WriteLine("--------------------------------------")
+        For x = 0 To nombre_alumnos.Count - 1
             Console.WriteLine("El alumno: " & nombre_alumnos(x) & "---> Promedio: " & lista_promedio(x) & " Estado: " & Estado(lista_promedio(x)))
         Next
+        Console.WriteLine("--------------------------------------")
+
+
+        mejor_nota = La_mejor_nota(promedio, mejor_nota, lista_promedio)
 
         Mejores_alumnos(nombre_alumnos, lista_promedio, mejor_nota)
-
 
     End Sub
 
@@ -67,22 +77,19 @@
         Loop
     End Function
 
-    Private Function Validar_nombre(ByRef nombre As String, ByVal lista_nombres() As String, ByVal i As Byte) As Boolean
+    Private Function Validar_nombre(ByVal nombre As String, ByVal lista As ArrayList) As Boolean
         Do
             If nombre = "" Then
                 Return True
+            ElseIf lista.Contains(nombre) Then
+                Return True
             Else
-                For x = 0 To i - 1
-                    If nombre = lista_nombres(x) Then
-                        Return True
-                    End If
-                Next
                 Return False
             End If
         Loop
     End Function
 
-    Private Function Validar_nota(ByVal nota As String, ByVal lista_notas() As String) As Boolean
+    Private Function Validar_nota(ByVal nota As String) As Boolean
         If nota = "" Then
             Return True
         End If
@@ -95,39 +102,30 @@
         Loop
     End Function
 
-    Private Function Promedio_alumnos(ByVal lista_deun_alumno() As String, ByVal promedio As Double) As Double
-        promedio = 0
-        Dim contador As Byte
-        For Each notas In lista_deun_alumno
-            promedio = promedio + notas
-            contador += 1
-        Next
-        promedio = promedio / contador
-        Return promedio
-    End Function
-
-    Private Function Estado(ByVal promedios As Double) As String
-        If promedios >= 6 Then
+    Private Function Estado(ByVal promedio As Single) As String
+        If promedio >= 6 Then
             Return "Aprobado"
         Else
             Return "Desaprobado"
         End If
     End Function
 
-    Private Sub Mejores_alumnos(nombre_alumnos() As String, lista_promedio() As String, mejor_nota As Double)
-        Console.WriteLine("Los mejores promedios es: " & mejor_nota)
-        For i = 0 To lista_promedio.Length - 1
+    Private Function La_mejor_nota(ByVal promedio As Double, ByVal mejor_nota As Single, ByVal lista As ArrayList) As Single
+        For Each promedio In lista
+            If promedio >= mejor_nota Then
+                mejor_nota = promedio
+            End If
+        Next
+        Return mejor_nota
+    End Function
+
+    Private Sub Mejores_alumnos(nombre_alumnos As ArrayList, lista_promedio As ArrayList, mejor_nota As Single)
+        Console.WriteLine("El mejor promedios es: " & mejor_nota)
+        For i = 0 To lista_promedio.Count - 1
             If lista_promedio(i) = mejor_nota Then
-                Console.WriteLine("Alumno: " & nombre_alumnos(i) & "  promedio de: " & mejor_nota)
+                Console.WriteLine("El Alumno: " & nombre_alumnos(i) & "  Tiene el mejor promedio de: " & mejor_nota)
             End If
         Next
     End Sub
-
-    Private Function La_mejor_nota(promedio As Double, mejor_nota As Double) As Double
-        If promedio >= mejor_nota Then
-            mejor_nota = promedio
-        End If
-        Return mejor_nota
-    End Function
 
 End Module
